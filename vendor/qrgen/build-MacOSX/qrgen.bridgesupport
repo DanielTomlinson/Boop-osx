@@ -1,0 +1,10 @@
+<?xml version='1.0'?>
+<signatures version='1.0'>
+<class name='QRGen'>
+<method class_method='true' selector='quickResponseImageForString:withDimension:'>
+<arg declared_type='NSString*' index='0' name='dataString' type='@'/>
+<arg declared_type='NSNumber*' index='1' name='dimension' type='@'/>
+<retval declared_type='NSImage*' type='@'/>
+</method>
+</class>
+</signatures>
