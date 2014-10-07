@@ -3,8 +3,8 @@ class AppDelegate
     buildMenu
     buildWindow
 
-    # NSUserDefaults.standardUserDefaults.removeObjectForKey("lt.danie.hacks.boop.tokens.group")
-    # NSUserDefaults.standardUserDefaults.removeObjectForKey("lt.danie.hacks.boop.tokens.user")
+    NSUserDefaults.standardUserDefaults.removeObjectForKey("lt.danie.hacks.boop.tokens.group")
+    NSUserDefaults.standardUserDefaults.removeObjectForKey("lt.danie.hacks.boop.tokens.user")
 
     NSApplication.sharedApplication.registerForRemoteNotificationTypes(1 << 2)
   end
@@ -24,7 +24,7 @@ class AppDelegate
 
   def application(app, didReceiveRemoteNotification:userInfo)
     notification = PushNotification.alloc.initWithUserInfo(userInfo)
-    url_string = "https://boop.ngrok.com/api/v1/messages/#{notification.message}/content".stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet)
+    url_string = "https://boop3.localtunnel.me/api/v1/messages/#{notification.message}/content"
 
     puts "Notification message: #{notification.message}"
     NSWorkspace.sharedWorkspace.openURL(NSURL.URLWithString(url_string))
@@ -123,7 +123,7 @@ end
 
 class APIManager
   def client
-    @client = AFMotion::SessionClient.build("https://boop.ngrok.com") do
+    @client = AFMotion::SessionClient.build("http://boop3.localtunnel.me") do
       session_configuration :default
 
       header "Accept", "application/json"
