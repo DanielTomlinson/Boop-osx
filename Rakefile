@@ -13,7 +13,7 @@ Motion::Project::App.setup do |app|
   app.name = 'Boop'
   app.identifier = 'lt.danie.hacks.boop'
 
-  app.codesign_certificate = "Mac Developer:  Danielle Lancashire(3K87M24N94)"
+  app.codesign_certificate = "Mac Developer: Danielle Lancashire (3K87M24N94)"
   app.codesign_for_development = true
 
   app.entitlements['com.apple.developer.aps-environment'] = 'development'
