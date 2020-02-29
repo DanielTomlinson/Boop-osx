@@ -64,7 +64,7 @@ GEM
     prettybacon (0.0.1)
       bacon (~> 1.2)
     rainbow (2.0.0)
-    rake (10.2.2)
+    rake (13.0.1)
     rest-client (1.6.7)
       mime-types (>= 1.16)
     rubocop (0.20.1)
